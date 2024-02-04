@@ -1,0 +1,148 @@
+@font-face {
+    font-family: roboto-reg;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+:root {
+    --main-color: rgb(50, 150, 250);
+    --page-white: rgb(240,240,240);
+    --page-grey: rgb(190,190,200);
+    --accent: rgb(200, 150, 0);
+}
+
+* {
+    font-family: roboto-reg, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    border: 1px red solid;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 4fr;
+}
+
+.sidebar {
+    display: grid;
+    grid-template: 1fr 3fr 1.5fr 20fr / 1fr;
+    background-color: var(--main-color);
+    color: var(--page-white);
+    grid-area: 1 / 1 / 3 / 2;
+    gap: 20px;
+    justify-items: left;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.top {
+    font-size: 2em;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.middle {
+    font-size: 1.2em;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.bottom {
+    font-size: 1.2em;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.header {
+    display: grid;
+    grid-template: 1fr 2fr / 2fr 1fr;
+    background-color: var(--page-white);
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.search {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.user {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+}
+
+.welcome {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 2fr 2fr 5fr;
+    grid-area: 2 / 1 / 3 / 2;
+    justify-items: left;
+}
+
+.profile_pic_large {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.welcome_message {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.welcome_username {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.welcome_user_tag {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+
+.buttons {
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+}
+
+
+
+
+.content {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    background-color: var(--page-grey);
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.section1 {
+    display: grid;
+    grid-template-rows: 1fr 15fr;
+}
+
+.section2, .secton3{
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+.projects {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 1fr;
+}
+
+.card {
+    background-color: var(--page-white);
+    border-left: 4px var(--accent) solid;
+    border-radius: 4px;
+    height: 200px;
+}
+
+.announcements {
+    background-color: var(--page-white);
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trending {
+    background-color: var(--page-white);
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
